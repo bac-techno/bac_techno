@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bac Techno 🇲🇦</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            🎓 Bac <span>Techno</span>
+        </div>
+
+        <nav>
+            <button onclick="goHome()">Accueil</button>
+            <button onclick="showSubjects()">Cours</button>
+            <button onclick="showQuiz()">Quiz</button>
+            <button onclick="showProgress()">Progression</button>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">🇲🇦 PLATEFORME ÉDUCATIVE MAROCAINE</p>
+
+            <h1>
+                Bac <span>Techno</span>
+            </h1>
+
+            <h2>
+                تعلم. تدرب. نجح.
+            </h2>
+
+            <p>
+                Tous tes cours, exercices, vidéos et examens
+                au même endroit.
+            </p>
+
+            <button class="main-button" onclick="showSubjects()">
+                🚀 Commencer
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUBJECTS -->
+    <section class="section" id="subjects">
+
+        <div class="section-title">
+
+            <p>APPRENDRE</p>
+
+            <h2>📚 Matières</h2>
+
+        </div>
+
+
+        <div class="cards">
+
+            <!-- MATH -->
+            <div class="card subject-card">
+
+                <div class="card-icon">
+                    📐
+                </div>
+
+                <h3>Mathématiques</h3>
+
+                <p>
+                    Fonctions, dérivation, suites,
+                    probabilités et plus.
+                </p>
+
+                <button onclick="openSubject('Mathématiques')">
+                    Ouvrir →
+                </button>
+
+            </div>
+
+
+            <!-- PHYSICS -->
+            <div class="card subject-card">
+
+                <div class="card-icon">
+                    ⚛️
+                </div>
+
+                <h3>Physique-Chimie</h3>
+
+                <p>
+                    Mécanique, électricité,
+                    chimie et exercices.
+                </p>
+
+                <button onclick="openSubject('Physique-Chimie')">
+                    Ouvrir →
+                </button>
+
+            </div>
+
+
+            <!-- COMPUTER SCIENCE -->
+            <div class="card subject-card">
+
+                <div class="card-icon">
+                    💻
+                </div>
+
+                <h3>Informatique</h3>
+
+                <p>
+                    Python, algorithmique,
+                    programmation et logique.
+                </p>
+
+                <button onclick="openSubject('Informatique')">
+                    Ouvrir →
+                </button>
+
+            </div>
+
+
+            <!-- FRENCH -->
+            <div class="card subject-card">
+
+                <div class="card-icon">
+                    🇫🇷
+                </div>
+
+                <h3>Français</h3>
+
+                <p>
+                    Langue, littérature,
+                    expression et méthodologie.
+                </p>
+
+                <button onclick="openSubject('Français')">
+                    Ouvrir →
+                </button>
+
+            </div>
+
+
+            <!-- ARABIC -->
+            <div class="card subject-card">
+
+                <div class="card-icon">
+                    📖
+                </div>
+
+                <h3>العربية</h3>
+
+                <p>
+                    دروس اللغة العربية
+                    والمنهجية.
+                </p>
+
+                <button onclick="openSubject('العربية')">
+                    Ouvrir →
+                </button>
+
+            </div>
+
+
+            <!-- PHILOSOPHY -->
+            <div class="card subject-card">
+
+                <div class="card-icon">
+                    🧠
+                </div>
+
+                <h3>Philosophie</h3>
+
+                <p>
+                    Méthodologie, concepts
+                    et dissertations.
+                </p>
+
+                <button onclick="openSubject('Philosophie')">
+                    Ouvrir →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- VIDEOS -->
+    <section class="section dark-section" id="videos">
+
+        <div class="section-title">
+
+            <p>APPRENDRE EN VIDÉO</p>
+
+            <h2>🎥 Cours vidéo</h2>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card video-card">
+
+                <div class="video-thumbnail">
+                    ▶
+                </div>
+
+                <h3>Introduction aux dérivées</h3>
+
+                <p>Mathématiques • 1ère Bac</p>
+
+                <button onclick="openVideo('videos/maths.mp4')">
+                    ▶ Regarder
+                </button>
+
+            </div>
+
+
+            <div class="card video-card">
+
+                <div class="video-thumbnail">
+                    ▶
+                </div>
+
+                <h3>Mécanique</h3>
+
+                <p>Physique • 1ère Bac</p>
+
+                <button onclick="openVideo('videos/physique.mp4')">
+                    ▶ Regarder
+                </button>
+
+            </div>
+
+
+            <div class="card video-card">
+
+                <div class="video-thumbnail">
+                    ▶
+                </div>
+
+                <h3>Introduction à Python</h3>
+
+                <p>Informatique • 1ère Bac</p>
+
+                <button onclick="openVideo('videos/python.mp4')">
+                    ▶ Regarder
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUIZ -->
+    <section class="section" id="quiz">
+
+        <div class="section-title">
+
+            <p>TESTE-TOI</p>
+
+            <h2>🎯 Quiz rapide</h2>
+
+        </div>
+
+
+        <div class="quiz">
+
+            <h3>
+                Quelle est la dérivée de x² ?
+            </h3>
+
+            <div class="answers">
+
+                <button onclick="answer(1)">
+                    A — x
+                </button>
+
+                <button onclick="answer(2)">
+                    B — 2x
+                </button>
+
+                <button onclick="answer(3)">
+                    C — x²
+                </button>
+
+            </div>
+
+            <p id="result"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROGRESS -->
+    <section class="section dark-section" id="progress-section">
+
+        <div class="section-title">
+
+            <p>TON PARCOURS</p>
+
+            <h2>📊 Ma progression</h2>
+
+        </div>
+
+
+        <div class="progress-box">
+
+            <div class="progress-info">
+
+                <span>Progression générale</span>
+
+                <strong id="progress-text">
+                    0%
+                </strong>
+
+            </div>
+
+            <div class="progress-container">
+
+                <div
+                    class="progress"
+                    id="progress-bar">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- VIDEO MODAL -->
+    <div
+        class="modal"
+        id="video-modal"
+        onclick="closeVideo(event)"
+    >
+
+        <div
+            class="modal-content"
+            onclick="event.stopPropagation()"
+        >
+
+            <button
+                class="close-button"
+                onclick="closeVideo()"
+            >
+                ✕
+            </button>
+
+            <video
+                id="video-player"
+                controls
+            >
+                <source
+                    id="video-source"
+                    src=""
+                    type="video/mp4"
+                >
+            </video>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUBJECT MODAL -->
+    <div
+        class="modal"
+        id="subject-modal"
+        onclick="closeSubject()"
+    >
+
+        <div
+            class="modal-content subject-modal-content"
+            onclick="event.stopPropagation()"
+        >
+
+            <button
+                class="close-button"
+                onclick="closeSubject()"
+            >
+                ✕
+            </button>
+
+            <div id="subject-content"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">
+            🎓 Bac Techno
+        </div>
+
+        <p>
+            تعلم. تدرب. نجح. 🇲🇦
+        </p>
+
+        <small>
+            © 2026 Bac Techno
+        </small>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
